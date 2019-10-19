@@ -1,0 +1,10 @@
+#mongodb
+spring:
+  data:
+    mongodb:      
+      password: '{cipher}619559d9733ff7040f931af59a0e3fc543eecc1836eb7a6fc1561a999ce2327a'
+      uri: mongodb+srv://diffuser:${spring.data.mongodb.password}@1byte-73wnp.mongodb.net/diffapi?retryWrites=true&w=majority      
+      database: diffapi
+# spring.data.mongodb.host=localhost
+# spring.data.mongodb.port=27017
+# spring.data.mongodb.database=test      

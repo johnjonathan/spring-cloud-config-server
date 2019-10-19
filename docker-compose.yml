@@ -1,0 +1,17 @@
+version: '3'
+networks:     
+    homeland:
+      driver: bridge    
+services:   
+  config-server:
+    image: johnjonathann/spring-cloud-config-server
+    container_name: config-server
+    ports: 
+      - 8888:8888
+    volumes:
+      - ./config:/config
+    environment: 
+      - SPRING_PROFILES_ACTIVE=native
+      - BANNER_LOCATION=file:/config/banner.txt
+    networks: 
+      - homeland
