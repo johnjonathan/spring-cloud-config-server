@@ -7,8 +7,10 @@ WORKDIR /src
 RUN ./gradlew --version
 
 COPY . .
-ENV MAIN_CLASS_NAME=com.example.App
+# ENV MAIN_CLASS_NAME=com.example.App
 RUN ./gradlew --no-daemon build
+
+VOLUME [ "/config" ]
 
 FROM openjdk:${VERSION}-jre-slim
 COPY --from=BUILD /src/build/libs/spring-cloud-config-server.jar /bin/run.jar

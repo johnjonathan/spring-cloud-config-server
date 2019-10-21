@@ -4,7 +4,7 @@ networks:
       driver: bridge    
 services:   
   config-server:
-    image: johnjonathann/spring-cloud-config-server
+    image: johnjonathan/spring-cloud-config-server:1.0.0
     container_name: config-server
     ports: 
       - 8888:8888

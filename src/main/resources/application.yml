@@ -2,15 +2,17 @@ info:
   component: Config Server
 spring:
   application:
-    name: config-server
+    name: configserver
   jmx:
     default_domain: cloud.config.server
+  profiles:
+    active: composite
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/spring-cloud-samples/config-repo          
-management:
-  context_path: /admin
+        composite:
+          - type: native
+            search-locations: /config
+        bootstrap: true
 encrypt:
   enabled: false
