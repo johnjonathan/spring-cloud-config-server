@@ -1,13 +1,2 @@
 encrypt:
-  key: MWJ5dGVJbmM=  
-  # keystore:
-  #   location: classpath:/config-server.jks
-  #   password: goto_go
-  #   alias: 1byte_inc
-  #   secret: you_shall_not_pass
-
-
-# server.port = 8443
-# server.ssl.key-store = classpath:sample.jks
-# server.ssl.key-store-password = secret
-# server.ssl.key-password = password    
+  key: MWJ5dGVJbmM=
